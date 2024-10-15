@@ -1,0 +1,13 @@
+- # **5B1 en base 2**
+010110110001
+
+- # **0xA en décimal** 
+10
+
+- # **En hexadécimal, quelles sont les valeurs maximales et minimales que l'on peut représenter sur 1 octets ?**
+00 à FF
+
+- # **la représentation binaire de l'adresse IP 192.168.1.80**
+11000000.10101000.00000001.01010000
+- # **la représentation hexadécimale de l'adresse IP 192.168.1.80**
+C0. A8. 01. 50
