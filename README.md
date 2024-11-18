@@ -59,9 +59,4 @@ Pour vérifier la configuration du domaine :
 
 Ouvre Active Directory Users and Computers.
 Tu devrais voir le domaine wilders.lan dans l'arborescence.
-
-## Ajouter des utilisateurs ou des ordinateurs au domaine
-Tu peux maintenant ajouter des ordinateurs ou des utilisateurs à ton domaine wilders.lan à partir de Active Directory Users and Computers.
-
-Pour ajouter un utilisateur : Fais un clic droit sur le domaine wilders.lan, puis choisis Nouveau > Utilisateur.
-Pour ajouter un ordinateur : Fais un clic droit sur le domaine wilders.lan, puis choisis Nouveau > Ordinateur.
+![Texte alternatif](https://github.com/AhmedNady90/devoir/blob/main/ADDS.PNG)
