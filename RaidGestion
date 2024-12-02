@@ -1,0 +1,348 @@
+trump@trump-VMware-Virtual-Platform:~$ history
+    1  su 
+    2  root
+    3  sudo apt install update
+    4  sudo apt update
+    5  ping google.com
+    6  ping 8.8.8.8
+    7  ip a
+    8  reboot
+    9  lsblk
+   10  cd /dev/
+   11  ls -la
+   12  mdadm --detail /dev/md0 
+   13  sudo mdadm --detail /dev/md0 
+   14  lsblk -f
+   15  éà   '  sudo ,te))!dev!,d ))level &)) rqid)devices é !dev!sb& !dev!sdc&
+   16  sudo fdisk -l
+   17  sudo lsblk
+   18  sudo mdadm --create --verbose /dev/md0 --level=1 --raid-devices=2 /dev/sdb /dev/sdc
+   19  cat /proc/mdstat
+   20  sudo mkfs.ext4 /dev/md0
+   21  sudo mkdir /mnt/raid1
+   22  sudo mount /dev/md0 /mnt/raid1
+   23  df -h /mnt/raid1
+   24  cat /proc/mdstat
+   25  sudo mkfs.ext4 /dev/md0
+   26  sudo mkdir /mnt/raid1
+   27  sudo mount /dev/md0 /mnt/raid1
+   28  df -h /mnt/raid1
+   29  sudo touch /mnt/raid1/testfile
+   30  sudo ls /mnt/raid1
+   31  sudo echo "Test RAID 1" > /mnt/raid1/testfile
+   32  sudo mdadm --fail /dev/md0 /dev/sdb1
+   33  sudo mdadm --remove /dev/md0 /dev/sdb1
+   34  cat /proc/mdstat
+   35  sudo umount /mnt/raid1
+   36  sudo mdadm --fail /dev/md0 /dev/sdb1
+   37  cat /proc/mdstat
+   38  sudo mdadm --fail /dev/md0 /dev/sdb1
+   39  sudo mdadm --fail /dev/md0 /dev/sdc1
+   40  sudo mdadm --fail /dev/md0 /dev/sdb
+   41  cat /proc/mdstat
+   42  sudo mdadm --add /dev/md0 /dev/sdb
+   43  sudo mount | grep /dev/sdb
+   44  sudo umount /dev/sdb
+   45  sudo lsof /dev/sdb
+   46  sudo mdadm --detail /dev/md0
+   47  sudo mdadm --add /dev/md0 /dev/sdb
+   48  sudo mdadm --remove /dev/md0 /dev/sdb
+   49  cat /proc/mdstat
+   50  sudo smartctl -a /dev/sdb
+   51  sudo mdadm --zero-superblock /dev/sdb
+   52  sudo mdadm --add /dev/md0 /dev/sdb
+   53  cat /proc/mdstat
+   54  histoire
+   55  history
+voici les details :
+Disque /dev/loop1 : 4 KiB, 4096 octets, 8 secteurs
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/loop2 : 73,87 MiB, 77459456 octets, 151288 secteurs
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/loop3 : 269,77 MiB, 282873856 octets, 552488 secteurs
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/loop4 : 274,05 MiB, 287358976 octets, 561248 secteurs
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/loop5 : 10,72 MiB, 11239424 octets, 21952 secteurs
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/loop6 : 11,11 MiB, 11649024 octets, 22752 secteurs
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/loop7 : 505,09 MiB, 529625088 octets, 1034424 secteurs
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/sdb : 1 GiB, 1073741824 octets, 2097152 secteurs
+Disk model: VMware Virtual S
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/sda : 20 GiB, 21474836480 octets, 41943040 secteurs
+Disk model: VMware Virtual S
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+Type d'étiquette de disque : gpt
+Identifiant de disque : 3B8F00C8-8FA6-489D-914B-DACB684D1792
+
+Périphérique Début      Fin Secteurs Taille Type
+/dev/sda1     2048     4095     2048     1M Amorçage BIOS
+/dev/sda2     4096 41940991 41936896    20G Système de fichiers Linux
+
+
+Disque /dev/sde : 1 GiB, 1073741824 octets, 2097152 secteurs
+Disk model: VMware Virtual S
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/sdd : 1 GiB, 1073741824 octets, 2097152 secteurs
+Disk model: VMware Virtual S
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/sdc : 1 GiB, 1073741824 octets, 2097152 secteurs
+Disk model: VMware Virtual S
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/loop8 : 91,69 MiB, 96141312 octets, 187776 secteurs
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/loop9 : 10,54 MiB, 11051008 octets, 21584 secteurs
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/loop10 : 38,83 MiB, 40714240 octets, 79520 secteurs
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/loop11 : 44,3 MiB, 46448640 octets, 90720 secteurs
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/loop12 : 500 KiB, 512000 octets, 1000 secteurs
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+
+
+Disque /dev/loop13 : 568 KiB, 581632 octets, 1136 secteurs
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+trump@trump-VMware-Virtual-Platform:~$ sudo lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0  74,3M  1 loop /snap/core22/1564
+loop1    7:1    0     4K  1 loop /snap/bare/5
+loop2    7:2    0  73,9M  1 loop /snap/core22/1722
+loop3    7:3    0 269,8M  1 loop /snap/firefox/4793
+loop4    7:4    0   274M  1 loop /snap/firefox/5361
+loop5    7:5    0  10,7M  1 loop /snap/firmware-updater/127
+loop6    7:6    0  11,1M  1 loop /snap/firmware-updater/147
+loop7    7:7    0 505,1M  1 loop /snap/gnome-42-2204/176
+loop8    7:8    0  91,7M  1 loop /snap/gtk-common-themes/1535
+loop9    7:9    0  10,5M  1 loop /snap/snap-store/1173
+loop10   7:10   0  38,8M  1 loop /snap/snapd/21759
+loop11   7:11   0  44,3M  1 loop /snap/snapd/23258
+loop12   7:12   0   500K  1 loop /snap/snapd-desktop-integration/178
+loop13   7:13   0   568K  1 loop /snap/snapd-desktop-integration/253
+sda      8:0    0    20G  0 disk 
+├─sda1   8:1    0     1M  0 part 
+└─sda2   8:2    0    20G  0 part /
+sdb      8:16   0     1G  0 disk 
+sdc      8:32   0     1G  0 disk 
+sdd      8:48   0     1G  0 disk 
+sde      8:64   0     1G  0 disk 
+sr0     11:0    1  1024M  0 rom  
+trump@trump-VMware-Virtual-Platform:~$ sudo mdadm --create --verbose /dev/md0 --level=1 --raid-devices=2 /dev/sdb /dev/sdc
+mdadm: Note: this array has metadata at the start and
+    may not be suitable as a boot device.  If you plan to
+    store '/boot' on this device please ensure that
+    your boot-loader understands md/v1.x metadata, or use
+    --metadata=0.90
+mdadm: size set to 1046528K
+Continue creating array? yes
+mdadm: Defaulting to version 1.2 metadata
+mdadm: array /dev/md0 started.
+trump@trump-VMware-Virtual-Platform:~$ cat /proc/mdstat
+Personalities : [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 sdc[1] sdb[0]
+      1046528 blocks super 1.2 [2/2] [UU]
+      
+unused devices: <none>
+trump@trump-VMware-Virtual-Platform:~$ sudo mkfs.ext4 /dev/md0
+mke2fs 1.47.0 (5-Feb-2023)
+En train de créer un système de fichiers avec 261632 4k blocs et 65408 i-noeuds.
+UUID de système de fichiers=bfc78497-aa5c-4b67-bfd0-7f44543ef180
+Superblocs de secours stockés sur les blocs : 
+	32768, 98304, 163840, 229376
+
+Allocation des tables de groupe : complété                            
+Écriture des tables d'i-noeuds : complété                            
+Création du journal (4096 blocs) : complété
+Écriture des superblocs et de l'information de comptabilité du système de
+fichiers : complété
+
+trump@trump-VMware-Virtual-Platform:~$ sudo mkdir /mnt/raid1
+sudo mount /dev/md0 /mnt/raid1
+trump@trump-VMware-Virtual-Platform:~$ df -h /mnt/raid1
+Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur
+/dev/md0           988M     24K  921M   1% /mnt/raid1
+trump@trump-VMware-Virtual-Platform:~$ cat /proc/mdstat
+Personalities : [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 sdc[1] sdb[0]
+      1046528 blocks super 1.2 [2/2] [UU]
+      
+unused devices: <none>
+trump@trump-VMware-Virtual-Platform:~$ sudo mkfs.ext4 /dev/md0
+mke2fs 1.47.0 (5-Feb-2023)
+/dev/md0 est monté ; ne fera pas un système de fichiers ici !
+trump@trump-VMware-Virtual-Platform:~$ sudo mkdir /mnt/raid1
+sudo mount /dev/md0 /mnt/raid1
+mkdir: impossible de créer le répertoire «/mnt/raid1»: Le fichier existe
+mount: /mnt/raid1: /dev/md0 déjà monté sur /mnt/raid1.
+       dmesg(1) may have more information after failed mount system call.
+trump@trump-VMware-Virtual-Platform:~$ df -h /mnt/raid1
+Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur
+/dev/md0           988M     24K  921M   1% /mnt/raid1
+trump@trump-VMware-Virtual-Platform:~$ sudo touch /mnt/raid1/testfile
+sudo ls /mnt/raid1
+lost+found  testfile
+trump@trump-VMware-Virtual-Platform:~$ sudo echo "Test RAID 1" > /mnt/raid1/testfile
+bash: /mnt/raid1/testfile: Permission non accordée
+trump@trump-VMware-Virtual-Platform:~$ sudo mdadm --fail /dev/md0 /dev/sdb1
+sudo mdadm --remove /dev/md0 /dev/sdb1
+mdadm: stat failed for /dev/sdb1: No such file or directory
+mdadm: stat failed for /dev/sdb1: No such file or directory
+trump@trump-VMware-Virtual-Platform:~$ cat /proc/mdstat
+Personalities : [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 sdc[1] sdb[0]
+      1046528 blocks super 1.2 [2/2] [UU]
+      
+unused devices: <none>
+trump@trump-VMware-Virtual-Platform:~$ ^C
+trump@trump-VMware-Virtual-Platform:~$ sudo umount /mnt/raid1
+trump@trump-VMware-Virtual-Platform:~$ sudo mdadm --fail /dev/md0 /dev/sdb1
+mdadm: stat failed for /dev/sdb1: No such file or directory
+trump@trump-VMware-Virtual-Platform:~$ cat /proc/mdstat
+Personalities : [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 sdc[1] sdb[0]
+      1046528 blocks super 1.2 [2/2] [UU]
+      
+unused devices: <none>
+trump@trump-VMware-Virtual-Platform:~$ sudo mdadm --fail /dev/md0 /dev/sdb1
+mdadm: stat failed for /dev/sdb1: No such file or directory
+trump@trump-VMware-Virtual-Platform:~$ sudo mdadm --fail /dev/md0 /dev/sdc1
+mdadm: stat failed for /dev/sdc1: No such file or directory
+trump@trump-VMware-Virtual-Platform:~$ sudo mdadm --fail /dev/md0 /dev/sdb
+mdadm: set /dev/sdb faulty in /dev/md0
+trump@trump-VMware-Virtual-Platform:~$ cat /proc/mdstat
+Personalities : [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 sdc[1] sdb[0](F)
+      1046528 blocks super 1.2 [2/1] [_U]
+      
+unused devices: <none>
+trump@trump-VMware-Virtual-Platform:~$ sudo mdadm --add /dev/md0 /dev/sdb
+mdadm: Cannot open /dev/sdb: Device or resource busy
+trump@trump-VMware-Virtual-Platform:~$ sudo mount | grep /dev/sdb
+trump@trump-VMware-Virtual-Platform:~$ sudo umount /dev/sdb
+umount: /dev/sdb: non monté.
+trump@trump-VMware-Virtual-Platform:~$ sudo lsof /dev/sdb
+lsof: WARNING: can't stat() fuse.portal file system /run/user/1000/doc
+      Output information may be incomplete.
+lsof: WARNING: can't stat() fuse.gvfsd-fuse file system /run/user/1000/gvfs
+      Output information may be incomplete.
+trump@trump-VMware-Virtual-Platform:~$ sudo mdadm --detail /dev/md0
+/dev/md0:
+           Version : 1.2
+     Creation Time : Mon Dec  2 16:09:18 2024
+        Raid Level : raid1
+        Array Size : 1046528 (1022.00 MiB 1071.64 MB)
+     Used Dev Size : 1046528 (1022.00 MiB 1071.64 MB)
+      Raid Devices : 2
+     Total Devices : 2
+       Persistence : Superblock is persistent
+
+       Update Time : Mon Dec  2 16:28:56 2024
+             State : clean, degraded 
+    Active Devices : 1
+   Working Devices : 1
+    Failed Devices : 1
+     Spare Devices : 0
+
+Consistency Policy : resync
+
+              Name : trump-VMware-Virtual-Platform:0  (local to host trump-VMware-Virtual-Platform)
+              UUID : 782c7760:25d32d8a:0fc8e0b0:d7c9e398
+            Events : 19
+
+    Number   Major   Minor   RaidDevice State
+       -       0        0        0      removed
+       1       8       32        1      active sync   /dev/sdc
+
+       0       8       16        -      faulty   /dev/sdb
+trump@trump-VMware-Virtual-Platform:~$ sudo mdadm --add /dev/md0 /dev/sdb
+mdadm: Cannot open /dev/sdb: Device or resource busy
+trump@trump-VMware-Virtual-Platform:~$ sudo mdadm --remove /dev/md0 /dev/sdb
+mdadm: hot removed /dev/sdb from /dev/md0
+trump@trump-VMware-Virtual-Platform:~$ cat /proc/mdstat
+Personalities : [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 sdc[1]
+      1046528 blocks super 1.2 [2/1] [_U]
+      
+unused devices: <none>
+trump@trump-VMware-Virtual-Platform:~$ sudo smartctl -a /dev/sdb
+sudo: smartctl : commande introuvable
+trump@trump-VMware-Virtual-Platform:~$ sudo mdadm --zero-superblock /dev/sdb
+trump@trump-VMware-Virtual-Platform:~$ sudo mdadm --add /dev/md0 /dev/sdb
+mdadm: added /dev/sdb
+trump@trump-VMware-Virtual-Platform:~$ cat /proc/mdstat
+Personalities : [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md0 : active raid1 sdb[2] sdc[1]
+      1046528 blocks super 1.2 [2/2] [UU]
+      
+unused devices: <none>
+trump@trump-VMware-Virtual-Platform:~$ histoire
+histoire : commande introuvable
