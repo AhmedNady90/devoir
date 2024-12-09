@@ -21,7 +21,7 @@ Erreurs 404 (page non trouvée)
     GET /favicon.ico : L'icône du site favicon.ico n'a pas été trouvée, ce qui a généré une erreur 404.
   ###  Fréquence des adresses IP
  utilse:  awk '{print $1}' /var/log/apache2/access.log | sort | uniq -c | sort -nr
- resultat :10 127.0.0.1
+ resultat :10 127.0.0.1 ![IP plus frequente](https://github.com/AhmedNady90/devoir/blob/main/IPplus%20Frequente.png)
 ## Explication de la structure des logs Apache
 ##### Adresse IP du client : C'est l'adresse IP du client qui fait la requête (ici 127.0.0.1 pour localhost).
 ##### Date et heure de la requête : La date et l'heure à laquelle la requête a été effectuée, avec le fuseau horaire.
