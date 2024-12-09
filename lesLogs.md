@@ -11,7 +11,7 @@ curl http://localhost/somepage
 ## Analyse des logs
 
 Après avoir généré du trafic, j'ai analysé les logs générés dans le fichier /var/log/apache2/access.log. 
-Voici un extrait des logs d'accès : ![Logs d'acces](chemin/vers/l'image.jpg)
+Voici un extrait des logs d'accès : ![Logs d'acces](https://github.com/AhmedNady90/devoir/blob/main/logsdAcces.png)
 ### Identification des requêtes réussies et des erreurs
 Requêtes réussies (code 200)
     GET / : La page d'accueil a été accédée avec succès.
