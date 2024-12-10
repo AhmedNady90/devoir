@@ -18,7 +18,7 @@
 ## 1. Liste des périphériques et partitions
 
 donald@central:~$ lsblk
-NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+*NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
 sda      8:0    0   20G  0 disk 
 ├─sda1   8:1    0   19G  0 part /
 ├─sda2   8:2    0    1K  0 part 
