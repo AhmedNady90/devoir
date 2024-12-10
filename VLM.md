@@ -33,7 +33,9 @@ sr0     11:0    1 1024M  0 rom
 ## 2. Création de la table de partitions avec `fdisk`
 
 donald@central:~$ sudo fdisk /dev/sdb
+
 [sudo] Mot de passe de donald : 
+
 
 Bienvenue dans fdisk (util-linux 2.38.1).
 Les modifications resteront en mémoire jusqu'à écriture.
@@ -56,6 +58,7 @@ Commande (m pour l'aide) : m
 ### Création d'une partition primaire
 
 Commande (m pour l'aide) : n
+
 Type de partition
    p   primaire (0 primaire, 0 étendue, 4 libre)
 Sélectionnez (p par défaut) : p
@@ -84,12 +87,15 @@ Synchronisation des disques.
 ## 3. Création du volume physique
 
 donald@central:~$ sudo pvcreate /dev/sdb1
+
+
 sudo: pvcreate : commande introuvable
 
 
 ### Installation de LVM
 
 donald@central:~$ sudo apt update
+
 sudo apt install lvm2
 
 
@@ -104,6 +110,7 @@ sudo apt install lvm2
 ### Création du volume physique
 
 donald@central:~$ sudo pvcreate /dev/sdb1
+
   Physical volume "/dev/sdb1" successfully created.
 
 
@@ -111,12 +118,15 @@ donald@central:~$ sudo pvcreate /dev/sdb1
 ### Tentative de création d'un groupe de volumes `debian-vg`
 
 donald@central:~$ sudo vgcreate debian-vg /dev/sdb1
+
   Volume group "debian-vg" successfully created
 
 
 ### Vérification du groupe de volumes
 
 donald@central:~$ sudo vgdisplay debian-vg
+
+
   --- Volume group ---
   VG Name               debian-vg
   VG Size               <20,00 GiB
@@ -127,33 +137,40 @@ donald@central:~$ sudo vgdisplay debian-vg
 ## 5. Création du volume logique
 
 donald@central:~$ sudo lvcreate -L 10G -n mylv debian-vg
+
+
   Logical volume "mylv" created.
 
 
 ## 6. Formatage du volume logique
 
 donald@central:~$ sudo mkfs.ext4 /dev/debian-vg/mylv
+
 mke2fs 1.47.0 (5-Feb-2023)
+
 Creating filesystem with 2621440 4k blocks and 655360 inodes
+
 Filesystem UUID: 2a7d4e4c-eaf9-42ff-9c11-2a79ea21a0ad
 
 
 ## 7. Montage du volume logique
 
 donald@central:~$ sudo mkdir /mnt/mylv
+
+
 sudo mount /dev/debian-vg/mylv /mnt/mylv
 
 
 ## 8. Vérification de l'espace disque
 donald@central:~$ df -h
+
+
 udev               935M       0  935M   0% /dev
 tmpfs              194M    1,5M  192M   1% /run
 /dev/sda1           19G    6,7G   11G  38% /
 tmpfs              967M       0  967M   0% /dev/shm
 tmpfs              5,0M    8,0K  5,0M   1% /run/lock
 tmpfs              194M     88K  194M   1% /run/user/1000
-Voici les commandes que vous avez utilisées dans un fichier Markdown, intégrées avec les étapes manquantes que vous avez demandées :
-
 
 
 ## création d'un snapshot
@@ -284,4 +301,6 @@ sudo lvremove /dev/debian-vg/home-snap
 sudo lvscan
 # Affiche les volumes logiques restants, y compris "home".
 ACTIVE            '/dev/debian-vg/mylv' [10,00 GiB] inherit
+
+
 ACTIVE            '/dev/debian-vg/home' [5,00 GiB] inherit
