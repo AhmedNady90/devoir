@@ -1,5 +1,4 @@
 
-
 # Résumé des étapes de la quête sur LVM
 
 1. Ajout d'un disque à la machine et extension du groupe de volumes debian-vg pour doubler l'espace du groupe, avec des commandes pvcreate et vgextend.
